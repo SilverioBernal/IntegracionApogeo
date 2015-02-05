@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SAP_TEMP_APOGEOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SAP_CABEZA_ASIENTO">
+          <Key>
+            <PropertyRef Name="ID_CABEZA_ASIENTO" />
+          </Key>
+          <Property Name="ID_CABEZA_ASIENTO" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JdtNum" Type="varchar" MaxLength="10" />
+          <Property Name="RefDate" Type="date" />
+          <Property Name="Memo" Type="varchar" MaxLength="50" />
+          <Property Name="Ref1" Type="varchar" MaxLength="100" />
+          <Property Name="Ref2" Type="varchar" MaxLength="100" />
+          <Property Name="TransCode" Type="varchar" MaxLength="4" />
+          <Property Name="Project" Type="varchar" MaxLength="20" />
+          <Property Name="TaxDate" Type="date" />
+          <Property Name="VatDate" Type="date" />
+          <Property Name="StampTax" Type="varchar" MaxLength="10" />
+          <Property Name="AutoVAT" Type="varchar" MaxLength="20" />
+          <Property Name="ESTADO" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="SAP_DETALLE_ASIENTO">
+          <Key>
+            <PropertyRef Name="ID_DETALLE_ASIENTO" />
+          </Key>
+          <Property Name="ID_DETALLE_ASIENTO" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JdtNum" Type="varchar" MaxLength="10" />
+          <Property Name="LineNum" Type="bigint" />
+          <Property Name="Account" Type="varchar" MaxLength="20" />
+          <Property Name="Debit" Type="money" />
+          <Property Name="Credit" Type="money" />
+          <Property Name="DueDate" Type="date" />
+          <Property Name="LineMemo" Type="varchar" MaxLength="100" />
+          <Property Name="RefDate" Type="date" />
+          <Property Name="Ref1" Type="varchar" MaxLength="100" />
+          <Property Name="Ref2" Type="varchar" MaxLength="100" />
+          <Property Name="Ref3Line" Type="varchar" MaxLength="100" />
+          <Property Name="Project" Type="varchar" MaxLength="20" />
+          <Property Name="TaxDate" Type="date" />
+          <Property Name="ProfitCode" Type="varchar" MaxLength="20" />
+          <Property Name="OcrCode2" Type="varchar" MaxLength="20" />
+          <Property Name="OcrCode3" Type="varchar" MaxLength="20" />
+          <Property Name="U_InfoCo01" Type="varchar" MaxLength="100" />
+          <Property Name="ESTADO" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="SAP_SOCIOS_NEGOCIO">
+          <Key>
+            <PropertyRef Name="ID_SOCIO_NEGOCIO" />
+          </Key>
+          <Property Name="ID_SOCIO_NEGOCIO" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RecordKey" Type="bigint" />
+          <Property Name="CardCode" Type="varchar" MaxLength="20" />
+          <Property Name="DebitorAccount" Type="varchar" MaxLength="20" />
+          <Property Name="Territory" Type="varchar" MaxLength="20" />
+          <Property Name="AccrualCriteria" Type="varchar" MaxLength="20" />
+          <Property Name="BlockDunning" Type="varchar" MaxLength="20" />
+          <Property Name="CardForeignName" Type="varchar" MaxLength="50" />
+          <Property Name="CardName" Type="varchar" MaxLength="200" />
+          <Property Name="CardType" Type="varchar" MaxLength="100" />
+          <Property Name="Cellular" Type="varchar" MaxLength="100" />
+          <Property Name="CollectionAuthorization" Type="varchar" MaxLength="100" />
+          <Property Name="CreditLimit" Type="varchar" MaxLength="100" />
+          <Property Name="Currency" Type="varchar" MaxLength="100" />
+          <Property Name="DeductibleAtSource" Type="varchar" MaxLength="100" />
+          <Property Name="DeferredTax" Type="varchar" MaxLength="100" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+          <Property Name="Equalization" Type="varchar" MaxLength="100" />
+          <Property Name="Fax" Type="varchar" MaxLength="100" />
+          <Property Name="FederalTaxID" Type="varchar" MaxLength="100" />
+          <Property Name="FreeText2" Type="varchar" MaxLength="100" />
+          <Property Name="GroupCode" Type="varchar" MaxLength="100" />
+          <Property Name="PartialDelivery" Type="varchar" MaxLength="100" />
+          <Property Name="PayTermsGrpCode" Type="varchar" MaxLength="100" />
+          <Property Name="Phone1" Type="varchar" MaxLength="100" />
+          <Property Name="Phone2" Type="varchar" MaxLength="100" />
+          <Property Name="Properties1" Type="varchar" MaxLength="100" />
+          <Property Name="Properties2" Type="varchar" MaxLength="100" />
+          <Property Name="Properties3" Type="varchar" MaxLength="100" />
+          <Property Name="SalesPersonCode" Type="varchar" MaxLength="100" />
+          <Property Name="Pager" Type="varchar" MaxLength="100" />
+          <Property Name="VatLiable" Type="varchar" MaxLength="100" />
+          <Property Name="B1" Type="varchar" MaxLength="100" />
+          <Property Name="VatGroup" Type="varchar" MaxLength="100" />
+          <Property Name="Website" Type="varchar" MaxLength="100" />
+          <Property Name="DunningTerm" Type="varchar" MaxLength="100" />
+          <Property Name="Priority" Type="varchar" MaxLength="100" />
+          <Property Name="PriceListNum" Type="varchar" MaxLength="100" />
+          <Property Name="PeymentMethodCode" Type="varchar" MaxLength="100" />
+          <Property Name="WTCode" Type="varchar" MaxLength="100" />
+          <Property Name="SubjectToWithholdingTax" Type="varchar" MaxLength="100" />
+          <Property Name="U_BPCO_City" Type="varchar" MaxLength="100" />
+          <Property Name="U_BPCO_CS" Type="varchar" MaxLength="100" />
+          <Property Name="U_BPCO_Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="U_BPCO_1Apellido" Type="varchar" MaxLength="100" />
+          <Property Name="U_BPCO_2Apellido" Type="varchar" MaxLength="100" />
+          <Property Name="U_BPCO_BPExt" Type="varchar" MaxLength="100" />
+          <Property Name="U_BPCO_TP" Type="varchar" MaxLength="100" />
+          <Property Name="U_BPCO_RTC" Type="varchar" MaxLength="100" />
+          <Property Name="U_BPCO_TDC" Type="varchar" MaxLength="100" />
+          <Property Name="U_BPCO_Address" Type="varchar" MaxLength="100" />
+          <Property Name="DownPaymentInterimAccount" Type="varchar" MaxLength="100" />
+          <Property Name="ESTADO" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="SAP_TEMP_APOGEOModelStoreContainer">
+          <EntitySet Name="SAP_CABEZA_ASIENTO" EntityType="Self.SAP_CABEZA_ASIENTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SAP_DETALLE_ASIENTO" EntityType="Self.SAP_DETALLE_ASIENTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SAP_SOCIOS_NEGOCIO" EntityType="Self.SAP_SOCIOS_NEGOCIO" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SAP_TEMP_APOGEOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SAP_CABEZA_ASIENTO">
+          <Key>
+            <PropertyRef Name="ID_CABEZA_ASIENTO" />
+          </Key>
+          <Property Name="ID_CABEZA_ASIENTO" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JdtNum" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RefDate" Type="DateTime" Precision="0" />
+          <Property Name="Memo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ref1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Ref2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TransCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Project" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TaxDate" Type="DateTime" Precision="0" />
+          <Property Name="VatDate" Type="DateTime" Precision="0" />
+          <Property Name="StampTax" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AutoVAT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SAP_DETALLE_ASIENTO">
+          <Key>
+            <PropertyRef Name="ID_DETALLE_ASIENTO" />
+          </Key>
+          <Property Name="ID_DETALLE_ASIENTO" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JdtNum" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LineNum" Type="Int64" />
+          <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Debit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Credit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DueDate" Type="DateTime" Precision="0" />
+          <Property Name="LineMemo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RefDate" Type="DateTime" Precision="0" />
+          <Property Name="Ref1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Ref2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Ref3Line" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Project" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TaxDate" Type="DateTime" Precision="0" />
+          <Property Name="ProfitCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OcrCode2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OcrCode3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="U_InfoCo01" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SAP_SOCIOS_NEGOCIO">
+          <Key>
+            <PropertyRef Name="ID_SOCIO_NEGOCIO" />
+          </Key>
+          <Property Name="ID_SOCIO_NEGOCIO" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RecordKey" Type="Int64" />
+          <Property Name="CardCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DebitorAccount" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Territory" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="AccrualCriteria" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BlockDunning" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CardForeignName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CardName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CardType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Cellular" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CollectionAuthorization" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CreditLimit" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Currency" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DeductibleAtSource" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DeferredTax" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Equalization" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FederalTaxID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FreeText2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GroupCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartialDelivery" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PayTermsGrpCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Phone1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Phone2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Properties1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Properties2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Properties3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SalesPersonCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Pager" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VatLiable" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="B1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VatGroup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Website" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DunningTerm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Priority" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PriceListNum" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PeymentMethodCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="WTCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SubjectToWithholdingTax" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="U_BPCO_City" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="U_BPCO_CS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="U_BPCO_Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="U_BPCO_1Apellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="U_BPCO_2Apellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="U_BPCO_BPExt" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="U_BPCO_TP" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="U_BPCO_RTC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="U_BPCO_TDC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="U_BPCO_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DownPaymentInterimAccount" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="SAP_TEMP_APOGEOEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SAP_CABEZA_ASIENTO" EntityType="Self.SAP_CABEZA_ASIENTO" />
+          <EntitySet Name="SAP_DETALLE_ASIENTO" EntityType="Self.SAP_DETALLE_ASIENTO" />
+          <EntitySet Name="SAP_SOCIOS_NEGOCIO" EntityType="Self.SAP_SOCIOS_NEGOCIO" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SAP_TEMP_APOGEOModelStoreContainer" CdmEntityContainer="SAP_TEMP_APOGEOEntities">
+          <EntitySetMapping Name="SAP_CABEZA_ASIENTO">
+            <EntityTypeMapping TypeName="SAP_TEMP_APOGEOModel.SAP_CABEZA_ASIENTO">
+              <MappingFragment StoreEntitySet="SAP_CABEZA_ASIENTO">
+                <ScalarProperty Name="ID_CABEZA_ASIENTO" ColumnName="ID_CABEZA_ASIENTO" />
+                <ScalarProperty Name="JdtNum" ColumnName="JdtNum" />
+                <ScalarProperty Name="RefDate" ColumnName="RefDate" />
+                <ScalarProperty Name="Memo" ColumnName="Memo" />
+                <ScalarProperty Name="Ref1" ColumnName="Ref1" />
+                <ScalarProperty Name="Ref2" ColumnName="Ref2" />
+                <ScalarProperty Name="TransCode" ColumnName="TransCode" />
+                <ScalarProperty Name="Project" ColumnName="Project" />
+                <ScalarProperty Name="TaxDate" ColumnName="TaxDate" />
+                <ScalarProperty Name="VatDate" ColumnName="VatDate" />
+                <ScalarProperty Name="StampTax" ColumnName="StampTax" />
+                <ScalarProperty Name="AutoVAT" ColumnName="AutoVAT" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SAP_DETALLE_ASIENTO">
+            <EntityTypeMapping TypeName="SAP_TEMP_APOGEOModel.SAP_DETALLE_ASIENTO">
+              <MappingFragment StoreEntitySet="SAP_DETALLE_ASIENTO">
+                <ScalarProperty Name="ID_DETALLE_ASIENTO" ColumnName="ID_DETALLE_ASIENTO" />
+                <ScalarProperty Name="JdtNum" ColumnName="JdtNum" />
+                <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+                <ScalarProperty Name="LineMemo" ColumnName="LineMemo" />
+                <ScalarProperty Name="RefDate" ColumnName="RefDate" />
+                <ScalarProperty Name="Ref1" ColumnName="Ref1" />
+                <ScalarProperty Name="Ref2" ColumnName="Ref2" />
+                <ScalarProperty Name="Ref3Line" ColumnName="Ref3Line" />
+                <ScalarProperty Name="Project" ColumnName="Project" />
+                <ScalarProperty Name="TaxDate" ColumnName="TaxDate" />
+                <ScalarProperty Name="ProfitCode" ColumnName="ProfitCode" />
+                <ScalarProperty Name="OcrCode2" ColumnName="OcrCode2" />
+                <ScalarProperty Name="OcrCode3" ColumnName="OcrCode3" />
+                <ScalarProperty Name="U_InfoCo01" ColumnName="U_InfoCo01" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SAP_SOCIOS_NEGOCIO">
+            <EntityTypeMapping TypeName="SAP_TEMP_APOGEOModel.SAP_SOCIOS_NEGOCIO">
+              <MappingFragment StoreEntitySet="SAP_SOCIOS_NEGOCIO">
+                <ScalarProperty Name="ID_SOCIO_NEGOCIO" ColumnName="ID_SOCIO_NEGOCIO" />
+                <ScalarProperty Name="RecordKey" ColumnName="RecordKey" />
+                <ScalarProperty Name="CardCode" ColumnName="CardCode" />
+                <ScalarProperty Name="DebitorAccount" ColumnName="DebitorAccount" />
+                <ScalarProperty Name="Territory" ColumnName="Territory" />
+                <ScalarProperty Name="AccrualCriteria" ColumnName="AccrualCriteria" />
+                <ScalarProperty Name="BlockDunning" ColumnName="BlockDunning" />
+                <ScalarProperty Name="CardForeignName" ColumnName="CardForeignName" />
+                <ScalarProperty Name="CardName" ColumnName="CardName" />
+                <ScalarProperty Name="CardType" ColumnName="CardType" />
+                <ScalarProperty Name="Cellular" ColumnName="Cellular" />
+                <ScalarProperty Name="CollectionAuthorization" ColumnName="CollectionAuthorization" />
+                <ScalarProperty Name="CreditLimit" ColumnName="CreditLimit" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="DeductibleAtSource" ColumnName="DeductibleAtSource" />
+                <ScalarProperty Name="DeferredTax" ColumnName="DeferredTax" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Equalization" ColumnName="Equalization" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="FederalTaxID" ColumnName="FederalTaxID" />
+                <ScalarProperty Name="FreeText2" ColumnName="FreeText2" />
+                <ScalarProperty Name="GroupCode" ColumnName="GroupCode" />
+                <ScalarProperty Name="PartialDelivery" ColumnName="PartialDelivery" />
+                <ScalarProperty Name="PayTermsGrpCode" ColumnName="PayTermsGrpCode" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+                <ScalarProperty Name="Properties1" ColumnName="Properties1" />
+                <ScalarProperty Name="Properties2" ColumnName="Properties2" />
+                <ScalarProperty Name="Properties3" ColumnName="Properties3" />
+                <ScalarProperty Name="SalesPersonCode" ColumnName="SalesPersonCode" />
+                <ScalarProperty Name="Pager" ColumnName="Pager" />
+                <ScalarProperty Name="VatLiable" ColumnName="VatLiable" />
+                <ScalarProperty Name="B1" ColumnName="B1" />
+                <ScalarProperty Name="VatGroup" ColumnName="VatGroup" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="DunningTerm" ColumnName="DunningTerm" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="PriceListNum" ColumnName="PriceListNum" />
+                <ScalarProperty Name="PeymentMethodCode" ColumnName="PeymentMethodCode" />
+                <ScalarProperty Name="WTCode" ColumnName="WTCode" />
+                <ScalarProperty Name="SubjectToWithholdingTax" ColumnName="SubjectToWithholdingTax" />
+                <ScalarProperty Name="U_BPCO_City" ColumnName="U_BPCO_City" />
+                <ScalarProperty Name="U_BPCO_CS" ColumnName="U_BPCO_CS" />
+                <ScalarProperty Name="U_BPCO_Nombre" ColumnName="U_BPCO_Nombre" />
+                <ScalarProperty Name="U_BPCO_1Apellido" ColumnName="U_BPCO_1Apellido" />
+                <ScalarProperty Name="U_BPCO_2Apellido" ColumnName="U_BPCO_2Apellido" />
+                <ScalarProperty Name="U_BPCO_BPExt" ColumnName="U_BPCO_BPExt" />
+                <ScalarProperty Name="U_BPCO_TP" ColumnName="U_BPCO_TP" />
+                <ScalarProperty Name="U_BPCO_RTC" ColumnName="U_BPCO_RTC" />
+                <ScalarProperty Name="U_BPCO_TDC" ColumnName="U_BPCO_TDC" />
+                <ScalarProperty Name="U_BPCO_Address" ColumnName="U_BPCO_Address" />
+                <ScalarProperty Name="DownPaymentInterimAccount" ColumnName="DownPaymentInterimAccount" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
