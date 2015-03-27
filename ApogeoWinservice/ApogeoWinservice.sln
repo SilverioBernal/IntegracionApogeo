@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SAP", "SAP", "{F748F480-C297-4460-89AC-BC4FFCD9C91B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{7296B15B-7CAA-4F87-B9B4-3C1B650A1BDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orkidea.ApogeoWinservice.SAP", "Orkidea.ApogeoWinservice.SAP\Orkidea.ApogeoWinservice.SAP.csproj", "{04EA37C0-9482-42C4-AE39-8A42F38FD567}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataManagement", "DataManagement", "{B299087A-5BC9-4F26-8FB8-592BA154562E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orkidea.ApogeoWinservice.Entities", "Orkidea.ApogeoWinservice.Entities\Orkidea.ApogeoWinservice.Entities.csproj", "{11756B1D-89C6-45EC-9F9A-25D0E87CD5F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orkidea.ApogeoWinservice.DAL", "Orkidea.ApogeoWinservice.DAL\Orkidea.ApogeoWinservice.DAL.csproj", "{F904C1D7-128A-4E19-A3BB-FB3C98D6F219}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orkidea.ApogeoWinservice.Business", "Orkidea.ApogeoWinservice.Business\Orkidea.ApogeoWinservice.Business.csproj", "{A401766D-286F-4798-8032-AC2304E8EAF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Winservice", "Winservice", "{1CE60B35-59C9-4CE7-90B9-03F8B3FC6078}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orkidea.ApogeoWinservice.Winservice", "Orkidea.ApogeoWinservice.Winservice\Orkidea.ApogeoWinservice.Winservice.csproj", "{D49C5DA6-E30F-4E98-8C17-5E944C4C1046}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04EA37C0-9482-42C4-AE39-8A42F38FD567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04EA37C0-9482-42C4-AE39-8A42F38FD567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04EA37C0-9482-42C4-AE39-8A42F38FD567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04EA37C0-9482-42C4-AE39-8A42F38FD567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11756B1D-89C6-45EC-9F9A-25D0E87CD5F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11756B1D-89C6-45EC-9F9A-25D0E87CD5F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11756B1D-89C6-45EC-9F9A-25D0E87CD5F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11756B1D-89C6-45EC-9F9A-25D0E87CD5F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F904C1D7-128A-4E19-A3BB-FB3C98D6F219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F904C1D7-128A-4E19-A3BB-FB3C98D6F219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F904C1D7-128A-4E19-A3BB-FB3C98D6F219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F904C1D7-128A-4E19-A3BB-FB3C98D6F219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A401766D-286F-4798-8032-AC2304E8EAF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A401766D-286F-4798-8032-AC2304E8EAF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A401766D-286F-4798-8032-AC2304E8EAF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A401766D-286F-4798-8032-AC2304E8EAF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D49C5DA6-E30F-4E98-8C17-5E944C4C1046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D49C5DA6-E30F-4E98-8C17-5E944C4C1046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D49C5DA6-E30F-4E98-8C17-5E944C4C1046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D49C5DA6-E30F-4E98-8C17-5E944C4C1046}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04EA37C0-9482-42C4-AE39-8A42F38FD567} = {F748F480-C297-4460-89AC-BC4FFCD9C91B}
+		{11756B1D-89C6-45EC-9F9A-25D0E87CD5F1} = {B299087A-5BC9-4F26-8FB8-592BA154562E}
+		{F904C1D7-128A-4E19-A3BB-FB3C98D6F219} = {B299087A-5BC9-4F26-8FB8-592BA154562E}
+		{A401766D-286F-4798-8032-AC2304E8EAF7} = {7296B15B-7CAA-4F87-B9B4-3C1B650A1BDA}
+		{D49C5DA6-E30F-4E98-8C17-5E944C4C1046} = {1CE60B35-59C9-4CE7-90B9-03F8B3FC6078}
+	EndGlobalSection
+EndGlobal
